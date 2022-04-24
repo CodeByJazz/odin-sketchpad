@@ -1,1 +1,1 @@
-# odin-sketchpad
+This is an interactive webpage that allows users to draw using their keyboard. By using javascript and css methods, I've created a user friendly interface that allows for creativity in a controlled environment. Get inspired and have fun with this browser based etch-a-sketch!
