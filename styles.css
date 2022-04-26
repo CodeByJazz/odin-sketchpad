@@ -1,20 +1,48 @@
 #container {
   display: inline-block;
-  border: 2px solid black;
   padding: 25px;
+  background-color: black;
 }
 
 #grid {
   display: grid;
   grid-template-columns: repeat(16, 40px);
   grid-template-rows: repeat (16, 40px);
-  grid-gap: 5px;
+
   width: auto;
   height: 500px;
+  border: 20px solid blue;
 }
-#grid div {
+
+/* #grid div {
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(80, 80, 197);
+} */
+
+/* #grid div:hover {
+  background-color: yellowgreen;
+} */
+
+@keyframes hover {
+  0% {
+    background: black;
+  }
+  100% {
+    background: greenyellow;
+  }
+}
+#grid div {
+  animation-name: hover;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+
+#grid div:active,
+#grid div:focus,
+#grid div:hover {
+  animation-fill-mode: backwards;
+  animation-play-state: running;
 }
