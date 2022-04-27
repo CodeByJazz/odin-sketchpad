@@ -1,7 +1,7 @@
 const grid = document.querySelector("#grid");
 const start = document.querySelector("#start-button");
 const reset = document.querySelector("#reset-button");
-const maxWidth = 400;
+const maxWidth = 500;
 
 window.addEventListener("load", makeGrid);
 
@@ -17,15 +17,10 @@ function makeGrid() {
       row.appendChild(column);
     }
     document.getElementById("grid").appendChild(row);
+    let squares = document.getElementsByClassName("column");
+    for (i = 0; i < squares.length; i++) {
+      squares[i].style.width = maxWidth / size + "px";
+      squares[i].style.height = maxWidth / size + "px";
+    }
   }
 }
-// function newGrid(number) {
-//   //   window.location.reload();
-//   let gridNum = prompt("How many sqaures per side?");
-//   alert(gridNum);
-//   let squares = gridNum * gridNum;
-//   for (x = 0; x < squares; x++) {
-//     const content = document.createElement("div");
-//     grid.appendChild(content);
-//   }
-// }

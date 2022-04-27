@@ -1,29 +1,23 @@
-#container {
-  display: inline-block;
-  padding: 20px;
+body {
+  text-align: center;
 }
 
 #grid {
-  display: grid;
-  grid-template-columns: repeat(16, 40px);
-  grid-template-rows: repeat (16, 40px);
-  width: auto;
-  height: 500px;
-  margin: 30px;
-  border: 20px solid blue;
+  display: inline-block;
 }
 
-/* #grid div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(80, 80, 197);
-} */
-
-/* #grid div:hover {
-  background-color: yellowgreen;
-} */
-
+.column {
+  display: inline-block;
+  background-color: black;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+}
+.row {
+  display: block;
+  width: 100%;
+  font-size: 0;
+}
 @keyframes hover {
   0% {
     background: black;
