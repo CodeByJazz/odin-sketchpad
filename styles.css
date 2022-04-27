@@ -1,16 +1,15 @@
 #container {
   display: inline-block;
-  padding: 25px;
-  background-color: black;
+  padding: 20px;
 }
 
 #grid {
   display: grid;
   grid-template-columns: repeat(16, 40px);
   grid-template-rows: repeat (16, 40px);
-
   width: auto;
   height: 500px;
+  margin: 30px;
   border: 20px solid blue;
 }
 
