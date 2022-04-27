@@ -24,3 +24,21 @@ function makeGrid() {
     }
   }
 }
+start.addEventListener("click", gridSize);
+function gridSize() {
+  let userGrid = prompt("Enter the number of squares per side for a new grid.");
+  let userGridNumber = parseInt(userGrid);
+  if (userGridNumber > 1 && userGridNumber <= 100) {
+    size = userGrid;
+    clearGrid();
+    makeGrid();
+  } else {
+    alert("Enter a digit from 1-100.");
+  }
+}
+function clearGrid() {
+  const gridArray = Array.from(grid.childNodes);
+  gridArray.forEach((element) => {
+    grid.removeChild(element);
+  });
+}
