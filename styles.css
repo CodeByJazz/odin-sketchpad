@@ -1,7 +1,16 @@
 body {
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button {
+  margin: 15px;
+  padding: 8px;
+  border-radius: 8px;
+}
+button:hover {
+  background-color: greenyellow;
+}
 #grid {
   display: inline-block;
 }
@@ -18,6 +27,7 @@ body {
   width: 100%;
   font-size: 0;
 }
+
 @keyframes hover {
   0% {
     background: black;
