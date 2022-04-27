@@ -1,6 +1,6 @@
 const grid = document.querySelector("#grid");
-const start = document.querySelector("#start-button");
-const reset = document.querySelector("#reset-button");
+const startGame = document.querySelector("#start-button");
+const resetGame = document.querySelector("#reset-button");
 const maxWidth = 500;
 
 window.addEventListener("load", makeGrid);
@@ -24,7 +24,8 @@ function makeGrid() {
     }
   }
 }
-start.addEventListener("click", gridSize);
+startGame.addEventListener("click", gridSize);
+
 function gridSize() {
   let userGrid = prompt("Enter the number of squares per side for a new grid.");
   let userGridNumber = parseInt(userGrid);
@@ -36,9 +37,12 @@ function gridSize() {
     alert("Enter a digit from 1-100.");
   }
 }
+
 function clearGrid() {
   const gridArray = Array.from(grid.childNodes);
   gridArray.forEach((element) => {
     grid.removeChild(element);
   });
 }
+
+resetGame.addEventListener("click", () => location.reload());
